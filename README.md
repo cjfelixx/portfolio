@@ -37,3 +37,4 @@ Check out our [Next.js deployment documentation](https://nextjs.org/docs/deploym
 
 [Github NextJS template](https://github.com/langchain-ai/langchain-nextjs-template)
 [GitHub Vercel NextJS pgvector](https://github.com/vercel/examples/tree/main/storage/postgres-pgvector)
+[Vercel vector DB Installation](https://vercel.com/guides/vector-databases)

@@ -1,9 +1,10 @@
 import 'hnswlib-node';
 import { HNSWLib } from "langchain/vectorstores/hnswlib";
+import {Document } from "langchain/document";
 import { OpenAIEmbeddings } from "langchain/embeddings/openai";
-import { RecursiveCharacterTextSplitter } from "langchain/text_splitter";
-import { PDFLoader } from 'langchain/document_loaders/fs/pdf'
 import path from 'path';
+
+import * as resumeData from '../data/resumeData.json';
 
 import dotnenv from 'dotenv';
 dotnenv.config();
@@ -12,15 +13,16 @@ const vectorStoreDirectory = path.resolve('data');
 async function main(): Promise<void> {
 
     try{
-        const loader = new PDFLoader(path.resolve("public/ClydeFelix_resume.pdf"));
-        const docs = await loader.load();
-        const textSplitter = new RecursiveCharacterTextSplitter({
-            chunkSize: 500,
-            chunkOverlap: 0,
-        });
-        const splitDocs = await textSplitter.splitDocuments(docs);
+
+        const docs = [
+            new Document({ pageContent: JSON.stringify(resumeData['information'])}),
+            new Document({ pageContent: JSON.stringify(resumeData['education'])}),
+            new Document({ pageContent: JSON.stringify(resumeData['work_experiences'])}),
+            new Document({ pageContent: JSON.stringify(resumeData['technical_skills'])}),
+            new Document({ pageContent: JSON.stringify(resumeData['projects'])}),
+        ]
         const embeddings = new OpenAIEmbeddings({openAIApiKey:process.env.OPENAI_API_KEY});
-        const vectorStore = await HNSWLib.fromDocuments(splitDocs,embeddings)
+        const vectorStore = await HNSWLib.fromDocuments(docs,embeddings)
 
         await vectorStore.save(vectorStoreDirectory);
 

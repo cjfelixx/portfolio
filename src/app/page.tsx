@@ -38,6 +38,7 @@ export default function Home() {
 
     const handleChange = (event: React.FormEvent<HTMLInputElement>) => {
         event.preventDefault();
+        event.currentTarget.value = event.currentTarget.value.charAt(0).toUpperCase() + event.currentTarget.value.slice(1); 
         setQuestionCount(event.currentTarget.value.length);
     }
     return (

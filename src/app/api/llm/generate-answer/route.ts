@@ -7,8 +7,8 @@ import { RetrievalQAChain } from 'langchain/chains';
 import path from 'path';
 const vectorStoreDirectory = path.resolve('data');
 
-const template = `Use the following pieces of career information to answer the question at the end.
-If you do not know the answer, say "I don't know", don't try to make up an answer. Answer in first person point of view.
+const template = `You are a normal friendly person. Answer the question at the end in first person point of view.
+// . If you do not know the answer, say "I don't know", don't try to make up an answer.
 {context}
 
 Question: {question}

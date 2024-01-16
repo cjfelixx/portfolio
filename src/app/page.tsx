@@ -1,6 +1,7 @@
 'use client'
 
 import { useState, FormEvent } from 'react';
+import Linkify from 'react-linkify';
 import LLM from "./lib/llm";
 
 const QUESTION_MAX_LENGTH = 96;
@@ -65,7 +66,7 @@ export default function Home() {
                 <div className='py-16 max-w-2xl px-8 min-h-fit'>
                 {loading ? 
                 (<span className="loading loading-dots loading-sm"></span>) :
-                (<p className="text-base " id="answer" >{answer}</p>) 
+                (<Linkify className="text-base " id="answer" >{answer}</Linkify>) 
                 }
             </div>
         </main>

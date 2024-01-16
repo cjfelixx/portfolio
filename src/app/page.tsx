@@ -66,7 +66,9 @@ export default function Home() {
                 <div className='py-16 max-w-2xl px-8 min-h-fit'>
                 {loading ? 
                 (<span className="loading loading-dots loading-sm"></span>) :
-                (<Linkify className="text-base " id="answer" >{answer}</Linkify>) 
+                (<Linkify>
+                <span className="text-base " id="answer">{answer}</span>
+                </Linkify>) 
                 }
             </div>
         </main>

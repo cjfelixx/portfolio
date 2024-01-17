@@ -44,7 +44,7 @@ export default function Home() {
     }
     return (
         <main key="main" className="flex flex-col items-center min-h-screen pt-32">
-            <h1 className="text-sm py-4">{`Ask a question about me:)`}</h1>
+            <h1 className="text-sm py-4">{`Ask career questions about me:)`}</h1>
                 <form onSubmit={submitQuestion}>
                     <div className="input-group w-full max-w-xs justify-center">
                         <input className="input input-lg input-bordered text-base" 

@@ -97,30 +97,43 @@
     "database": ["SQL(MSSQL,Postgresql)", "MongoDB"],
     "cloud platforms": ["Amazon Web Services (AWS)", "Google Cloud Platform (GCP)"]
   },
-  "publications" : {
-
-  },
+  "publications" : [
+    {
+    "article title": "Personalized Learning Using Kernel Methods and Random Fourier Features",
+    "website link": "https://ieeexplore.ieee.org/document/9892643",
+    "description": ["Distributed learning algorithms have become an increasingly popular research topic due to the increasing proliferation of IoT devices and sensor networks with edge processing capabilities. This paper focuses on a distributed learning algorithm, Personalized Learning. In Personalized Learning, a population of N edge devices learns its similarities while preserving its learnings individually. Personalized Learning consists of a two-step iterative approach: N edge processors are learning for each L “canonical” model, and the characteristics of canonical models are estimated based on the learned edges. In earlier works, linear and logistic regression models were used to estimate characteristics in the first step. This work extends the previous work on the framework for personalized learning using non-linear data. This research improves the computational speed and performance of the current framework using Kernel Methods by Random Fourier Features for learning the first layer and compares these learning methods with linear models in simulation studies."]
+    },
+    {
+    "article title":"Vapnik-Chervonenkis-dimensionsof non-deterministic finite Automata for words of equal length",
+    "website link":"https://arxiv.org/pdf/2001.02309v1.pdf",
+    "description": "Ishigami and Tani studied VC-dimensions of deterministic finite automata. We obtain analogous results for the nondeterministic case by extending a result of Champarnaud and Pin. We show that for the nondeterministic case, if we fully restrict attention to words of length n, then we at most need the strictly increasing initial terms in this sum."
+    }
+],
   "certifications": {
 
   },
   "projects": [
     {
       "project": "Federated Learning using Online-Kernel Methods",
+      "website link": "https://github.com/cjfelixx/hoteling-app-client",
       "description": ["Simulated Online Federated Learning using iterative least-squares algorithms, and kernel methods using Python.",
       "Wrote an accepted publication on Personalized Learning using kernel approximations on Random Fourier Features."]
     },
     {
       "project": "Reinforcement Learning on an Asymmetric Strategic game",
+      "website link": "https://github.com/cjfelixx/Goats-and-Tigers",
       "description": ["Led 5-10 undergraduate students in developing a strategy board game Goats & Tigers using Python.",
       "Implemented Reinforcement Learning to research computer behavior using Keras/Tensorflow, and Jupyter."]
     },
     {
       "project": "Workspace Hoteling application",
+      "website link": "https://github.com/cjfelixx/machine-learning-graduate-research",
       "description": ["Developed a mobile-responsive workspace reservation web application utilizing the MERN stack (MongoDB, Express, React, Node).",
       "Leveraged AWS services such as EC2, RDS, Cognito, ECS, and CloudFront to deploy web applications for production use."]
     },
     {
       "project": "Portfolio web application as an LLM chatbot",
+      "website link": "https://clyde-felix-portfolio.vercel.app",
       "description": ["Developed a dynamic and interactive portfolio website leveraging the Next Typescript framework, enhancing user engagement with a modern and responsive design",
       "Innovatively implemented a chatbot powered by ChatGPT Large Language Model (LLM) using the Retrieval Augmented Generation (RAG) architecture, enabling users to pose questions about my resume data directly on the website."]
     }

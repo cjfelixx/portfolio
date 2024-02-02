@@ -8,7 +8,7 @@ import path from 'path';
 const vectorStoreDirectory = path.resolve('data');
 
 const template = `You are a normal friendly person. Answer the question at the end in first person point of view.
-// . If you do not know the answer, say "I don't know", don't try to make up an answer.
+
 {context}
 
 Question: {question}
@@ -16,6 +16,7 @@ Answer:
 
 Take a deep breath and work on this problem step by step.
 `
+// . If you do not know the answer, say "I don't know", don't try to make up an answer.
 
 export async function POST(request: Request) {
 

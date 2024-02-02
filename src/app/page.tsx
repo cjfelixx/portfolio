@@ -66,7 +66,9 @@ export default function Home() {
                 <div className='py-16 max-w-2xl px-8 min-h-fit'>
                 {loading ? 
                 (<span className="loading loading-dots loading-sm"></span>) :
-                (<Linkify>
+                (<Linkify componentDecorator={(decoratedHref, decoratedText, key) => (
+                    <a href={decoratedHref} key={key} className='text-sky-400/100'>{decoratedText}</a>
+                )}>
                 <span className="text-base " id="answer">{answer}</span>
                 </Linkify>) 
                 }
